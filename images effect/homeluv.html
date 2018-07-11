@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>home page</title>
+<link href="homeluv.css" rel="stylesheet" type="text/css">
+
+<meta name ="viewport" content ="width=device-width, initial-scale=1">
+<style type="text/css">
+body{
+	background:#202a3f;
+	
+	 
+}
+.main{
+	max-width:1000px;
+	margin:auto;
+	margin-top:40px;
+}
+input[type=text]{
+	width:85%;
+	padding:12px;
+	font-family:arial;
+	font-size:17px;
+	border:1px solid #0076a3;
+	border-right:0;
+	border-radius:5px 0 0 5px;
+	font-style:italic;
+}
+input[type=submit]{
+    position:absolute;
+	width:8%;
+	padding:12px;
+	font-family:arial;
+	font-size:17px;
+	text-shadow:0 0 1px #000;
+	cursor:pointer;
+	text-align:center;
+	color:#fff;
+	border-right:0;
+	background:linear-gradient(#00adee,#0078a5);
+	border:1px solid #0076a3;
+}
+input[type=submit]:hover{
+    background:linear-gradient(#0095cc,#00678e);
+}
+input[type=text]:focus,input[type=submit]:focus{
+    outline:none;
+}
+
+</style>
+</head>
+<body>
+
+<div id="block">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<nav>
+<ul>
+<li><a href="#"><img src="svg/cart.svg" alt="icon name" height="15" width="15"> MyCart</a></li>
+<li><a href="#"><img src="svg/account-logout.svg" alt="icon name" height="15" width="15"> LogOut</a></li>
+</ul>
+<div class=logo>
+<ul>
+<li><a href="#">LUV U BUY</a></li>
+</ul>
+</div>
+</nav>
+</div>
+<br><br>
+<div class="main">
+<form>
+<input type ="text" name ="search" placeholder ="Search..">
+<input type ="submit" value ="Search">
+</form>
+</div>
+</div>
+<br><br>
+<div class="wrapper">
+<img src="images/1.jpg" alt="" />
+<div class="content">
+    <select class="sectiontohide">
+<option selected value="Select Category">Search by Category</option>
+            <option>Academics</option>
+            <option>Comics</option>
+            <option>Nobel</option>
+            <option>Bio Graphy</option>
+            <option>Granthas</option>
+            <option>Magzinn</option>
+            <option>News</option>
+            <option>Test Papers</option>
+            </select>
+<div class="text_area">
+Search by Category
+</div>
+</div>
+</div>
+
+<div class="wrapper1">
+<img src="images/2.jpg" alt="" />
+<div class="content">
+    <input type="text" name="BookTitle" size="25" style="margin-top:3%">
+<div class="text_area">
+Search by Book Title
+</div>
+</div>
+</div>
+</body>
+</html>

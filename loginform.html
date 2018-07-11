@@ -1,0 +1,113 @@
+<!--
+* * * * * * * * * * * * * * * *
+* * * Created by : Thabet El Debuch
+* * * Facebook : https://www.facebook.com/soene.doeb
+* * * * * * * * * * * * * * * *
+-->
+<html>
+<head>
+	<style>
+		#p1 , #p2{
+			position: absolute;
+			top: 0;
+			left: 40%;
+			color: white;
+			margin-top:20px;
+			text-align: center;
+			font-size: 20px;
+		}
+		#p1{ 
+			z-index: 2;
+			background: black;
+		}
+		#p2{
+			z-index: 1;
+			background:red;
+		}
+        #c1,#c2{
+			padding-top: 30%;
+			padding-bottom: 30%;
+            display: block;
+			width : 100px;
+			height: 100px;
+        }
+		strong{
+			color: #bfbfbf;
+		}
+        @keyframes p1{
+			0%   {
+				transform: translate(0)rotate(0);
+			}
+			50%  {
+				transform: translate(200px) rotate(45deg);
+			}
+			100% {
+				transform: translate(0)  rotate(0deg);
+			}
+		}
+		@keyframes p2{
+			0%   {
+				transform: translate(0)rotate(0);
+			}
+			50%  {
+				transform: translate(-200px) rotate(-45deg);
+			}
+			100% {
+				transform: translate(0)  rotate(0deg);
+			}
+		}
+        .animateP1{
+            animation: p1 1s ease-out  1;
+        }
+        .animateP2 {
+			animation: p2 1s ease-out 1;
+		}
+	</style>
+	<title> sign in & sign up</title>
+</head>
+<body>
+	<div id="p1" onclick="animateP2()">
+		<div id="c1" class="">
+			Black 1<hr>
+			<strong>Click to change</strong>
+		</div>
+	</div>
+	<div id="p2" onclick="animateP1()">
+		<div id="c2">
+			Red 2<hr>
+			<strong>Click to change</strong>
+
+		</div>
+	</div>
+    <script>
+		var p1 = document.getElementById("p1");
+		var p2 = document.getElementById("p2");
+
+		function animateP1(){
+            p1.classList.add("animateP1");
+
+            setTimeout(function () {
+                p1.style.zIndex="2";
+                p2.style.zIndex="1";
+            },500);
+
+            setTimeout(function () {
+                p1.classList.remove("animateP1");
+            },1500);
+		}
+		function animateP2(){
+            p2.classList.add("animateP2");
+
+			setTimeout(function () {
+                p1.style.zIndex="1";
+                p2.style.zIndex="2";
+            },500);
+
+            setTimeout(function () {
+                p2.classList.remove("animateP2");
+            },1500);
+        }
+    </script>
+
+</body>
+</html>
